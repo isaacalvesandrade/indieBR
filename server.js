@@ -3,7 +3,6 @@ import express from 'express';
 import sql from './db.js';
 
 const app = express();
-const port = 8080;
 
 app.use(express.static('public'));
 
@@ -21,6 +20,5 @@ app.get('/api/capatitulo', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server Iniciado na Porta: ${port}`);
-});
+
+export default app;
